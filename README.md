@@ -1,112 +1,237 @@
-🚀 Üniversite Spor Tesisleri Rezervasyon Sistemi
+# 🚀 Üniversite Spor Tesisleri Rezervasyon Sistemi
 
-Üniversite bünyesindeki spor tesislerinin yönetimini, saha rezervasyonlarını ve personel takibini dijitalleştiren, ilişkisel (SQL) ve doküman tabanlı (NoSQL) veritabanı mantığını birleştiren hibrit bir yönetim sistemi.
+![C#](https://img.shields.io/badge/Dil-C%23-blue)
+![Framework](https://img.shields.io/badge/Framework-Windows%20Forms-green)
+![Veritabanı](https://img.shields.io/badge/Database-MS%20SQL%20Server-red)
+![NoSQL](https://img.shields.io/badge/NoSQL-MongoDB-brightgreen)
+![Mimari](https://img.shields.io/badge/Mimari-Hybrid%20SQL%20%2B%20NoSQL-orange)
 
-Bu proje, karmaşık tesis yönetim süreçlerini optimize etmek ve veri bütünlüğünü en üst seviyede tutmak amacıyla bir Endüstri Mühendisliği perspektifiyle geliştirilmiş kapsamlı bir PoC (Kavram Kanıtı) çalışmasıdır.
+> Üniversite bünyesindeki spor tesislerinin yönetimini, saha rezervasyonlarını ve personel takibini dijitalleştiren; ilişkisel (SQL) ve doküman tabanlı (NoSQL) veritabanı mimarisini birleştiren hibrit bir yönetim sistemi.
 
-🖼️ Kullanıcı Arayüzü (WinForms)
+Bu proje, **Endüstri Mühendisliği perspektifiyle** tesis yönetim süreçlerini optimize etmek ve **veri bütünlüğünü en üst seviyede sağlamak** amacıyla geliştirilmiş bir **Proof of Concept (PoC)** çalışmasıdır.
 
-Sistem, C# Windows Forms üzerinde geliştirilmiş, kullanıcı dostu ve fonksiyonel bir arayüze sahiptir. Yönetim paneli üzerinden üyelik işlemleri, tesis durum kontrolleri ve finansal raporlamalar anlık olarak takip edilebilir.
+---
 
-📋 İçindekiler
+# 🖼️ Kullanıcı Arayüzü (WinForms)
 
-Ana Özellikler
+Sistem **C# Windows Forms** kullanılarak geliştirilmiş **kullanıcı dostu bir yönetim paneline** sahiptir.
 
-Veritabanı Nesneleri ve Mantığı
+Yönetim arayüzü üzerinden kullanıcılar:
 
-Teknoloji Mimarisi
+* Üyelik işlemlerini yönetebilir
+* Tesis uygunluk durumlarını kontrol edebilir
+* Rezervasyonları takip edebilir
+* Finansal raporları görüntüleyebilir
 
-Proje Yapısı
+Arayüz, spor tesisi yönetiminde operasyonel süreçleri kolaylaştırmak amacıyla tasarlanmıştır.
 
-Kurulum ve Çalıştırma
+---
 
-Proje Sahipleri
+# 📋 İçindekiler
 
-🎯 Ana Özellikler
+* Ana Özellikler
+* Veritabanı Mimarisi
+* Teknoloji Altyapısı
+* Proje Yapısı
+* Kurulum ve Çalıştırma
+* Proje Ekibi
 
-Bu sistemin temel yetenekleri ve mühendislik çözümleri şunlardır:
+---
 
-🏗️ Gelişmiş Veritabanı Mimarisi: - Veriler, veri bütünlüğünü ve performansını optimize etmek adına 3. Normal Form (3NF) kurallarına göre normalize edilmiştir.
+# 🎯 Ana Özellikler
 
-Gereksiz veri tekrarı önlenmiş ve ilişkisel bağlar sağlam temellere oturtulmuştur.
+## 🏗️ Gelişmiş Veritabanı Tasarımı
 
-🤖 Akıllı Otomasyon ve Kontroller (Triggers):
+* Veritabanı **3. Normal Form (3NF)** kurallarına göre tasarlanmıştır.
+* Veri tekrarını (redundancy) ortadan kaldırır.
+* İlişkisel veri bütünlüğünü güçlü şekilde korur.
 
-Bakım Kontrolü: Saha durumu "Bakımda" veya "Kapalı" ise sistem otomatik olarak rezervasyon girişini engeller.
+## 🤖 Tetikleyiciler ile Akıllı Otomasyon
 
-Validasyon: Hatalı tarih girişlerini (bitişin başlangıçtan önce olması gibi) veritabanı seviyesinde önleyen tetikleyiciler.
+Veritabanı seviyesinde otomatik kontroller sağlayan **Triggers** kullanılmıştır:
 
-⚙️ İş Mantığı Yönetimi (Stored Procedures):
+* **Bakım Kontrolü:** Bir saha "Bakımda" veya "Kapalı" durumundaysa rezervasyon yapılmasını otomatik olarak engeller.
+* **Validasyon Kuralları:** Bitiş tarihinin başlangıçtan önce olması gibi hatalı rezervasyon girişlerini önler.
 
-Maaş Analizi: Personel maaş takibi ve zam planlama simülasyonları için özel prosedürler.
+## ⚙️ Stored Procedure ile İş Mantığı Yönetimi
 
-VIP Kampanya Sistemi: Üye harcama limitlerini analiz ederek otomatik olarak "VIP" statüsü tanımlayan akıllı algoritmalar.
+Sistem içerisinde kritik iş süreçlerini yöneten özel prosedürler geliştirilmiştir:
 
-🔄 Hibrit Veri Modeli: - MS SQL Server üzerindeki ilişkisel veriler, yüksek performanslı okuma ve esnek dökümantasyon ihtiyaçları için MongoDB (JSON) formatına migrate edilerek hibrit bir yapı kurulmuştur.
+* **Maaş Analiz Sistemi**
+  Personel maaş takibi ve zam planlama simülasyonları yapılabilir.
 
-🔬 Veritabanı Nesneleri (Teknik Detay)
+* **VIP Üyelik Kampanyası**
+  Üyelerin harcama alışkanlıklarını analiz ederek otomatik olarak **VIP statüsü** tanımlar.
 
-Proje içerisinde yer alan bazı kritik SQL nesneleri ve işlevleri:
+## 🔄 Hibrit Veri Mimarisi
 
-Scalar Functions: * fn_SeansBelirle: Giriş saatine göre otomatik tarife hesaplar.
+Sistem hem **Relational Database** hem de **NoSQL** mimarisini birlikte kullanır.
 
-UyelikKalanGunSayisi: Üyelik paketlerinin kalan süresini gerçek zamanlı takip eder.
+* Operasyonel veriler **MS SQL Server** üzerinde tutulur
+* Seçili veri setleri **MongoDB (JSON)** formatına aktarılır
 
-Stored Procedures: * EkipmanKiralama: Stok kontrollü ekipman kiralama süreci.
+Bu hibrit yapı sayesinde:
 
-prc_UyeKayitEkleme: Hata kontrollü ve validasyonlu yeni üye kaydı.
+* Yüksek performanslı sorgular
+* Esnek veri saklama
+* Ölçeklenebilir veri erişimi
 
-Views & Joins: Karmaşık üye hareketleri ve ödeme raporları için optimize edilmiş, yüksek performanslı sorgu görünümleri.
+sağlanmaktadır.
 
-🛠️ Teknoloji Mimarisi
+---
 
-📂 Proje Yapısı
+# 🔬 Veritabanı Nesneleri (Teknik Detaylar)
 
-Proje, yönetimi kolay ve modüler bir klasör hiyerarşisine sahiptir:
+## Scalar Functions
 
+* **fn_SeansBelirle**
+  Giriş saatine göre otomatik tarife belirler.
+
+* **UyelikKalanGunSayisi**
+  Üyelik paketlerinin kalan süresini gerçek zamanlı hesaplar.
+
+## Stored Procedures
+
+* **EkipmanKiralama**
+  Stok kontrollü ekipman kiralama sürecini yönetir.
+
+* **prc_UyeKayitEkleme**
+  Hata kontrollü ve validasyonlu yeni üye kaydı oluşturur.
+
+## Views ve Karmaşık Join Yapıları
+
+Optimize edilmiş sorgu görünümleri kullanılmıştır:
+
+* Üye hareketleri raporları
+* Ödeme analizleri
+* Rezervasyon takip sistemi
+
+---
+
+# 🛠️ Teknoloji Altyapısı
+
+* **C#**
+* **.NET Framework**
+* **Windows Forms**
+* **Microsoft SQL Server**
+* **MongoDB**
+* **Visual Studio**
+
+---
+
+# 📂 Proje Yapısı
+
+```
 Sports_Facility_Management/
+
 ├── Database/
-│   ├── Schema.sql           # Tablo oluşturma, Trigger ve SP scriptleri
-│   └── Normalization.docx   # 1NF, 2NF, 3NF raporları ve tasarım kararları
+│   ├── Schema.sql
+│   └── Normalization.docx
+
 ├── NoSQL/
-│   └── Collections/         # MongoDB JSON çıktıları (Üye, Tesis, Rezervasyon vb.)
+│   └── Collections/
+
 ├── Documentation/
-│   ├── ER_Diagram.pdf       # Varlık-İlişki (E-R) diyagramı
-│   └── UML_Diagram.png      # Sistem sınıf diyagramı
+│   ├── ER_Diagram.pdf
+│   └── UML_Diagram.png
+
 └── SourceCode/
-    └── WindowsFormsApp2/    # C# WinForms proje kaynak kodları ve Solution (.sln)
+    └── WindowsFormsApp2/
+```
 
+### Klasör Açıklamaları
 
-🚀 Kurulum ve Çalıştırma
+**Database/**
 
-Projeyi yerel ortamınızda ayağa kaldırmak için şu adımları izleyin:
+* SQL tablo yapıları
+* Trigger tanımları
+* Stored Procedure scriptleri
 
-Veritabanı Kurulumu: Database/ klasöründeki .sql dosyasını MS SQL Server Management Studio (SSMS) üzerinde çalıştırarak şemayı oluşturun.
+**NoSQL/**
 
-IDE Hazırlığı: Visual Studio ile SourceCode/ altındaki .sln dosyasını açın.
+* MongoDB JSON koleksiyon çıktıları
 
-Bağlantı Ayarları: App.config dosyasındaki Connection Strings (Bağlantı Dizeleri) bölümünü kendi yerel SQL Server ve MongoDB sunucu bilgilerinizle güncelleyin.
+**Documentation/**
 
-Derleme: Projeyi Build (Derle) yaptıktan sonra Start diyerek uygulamayı başlatabilirsiniz.
+* ER Diyagramı
+* UML diyagramları
 
-👥 Proje Sahipleri
+**SourceCode/**
 
-Bu çalışma, bir ekip projesi olarak aşağıdaki üyeler tarafından geliştirilmiştir:
+* C# WinForms uygulamasının tüm kaynak kodları
 
-İsim Soyisim
+---
 
-Bölüm
+# 🚀 Kurulum ve Çalıştırma
 
-Tunahan Yanık
+Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyin.
 
-Endüstri Mühendisliği
+## 1️⃣ Repoyu Klonlayın
 
-Ceren Akça
+```
+git clone https://github.com/KULLANICI_ADINIZ/Sports_Facility_Management.git
+cd Sports_Facility_Management
+```
 
-Endüstri Mühendisliği
+## 2️⃣ Veritabanını Kurun
 
-Beliz Kaplan
+Aşağıdaki SQL scriptini çalıştırın:
 
-Endüstri Mühendisliği
+```
+Database/Schema.sql
+```
 
-Bu proje, üniversite tesis yönetimi süreçlerinin dijital dönüşümüne katkı sağlamak amacıyla geliştirilmiştir.
+Scripti **Microsoft SQL Server Management Studio (SSMS)** üzerinde çalıştırarak veritabanı şemasını oluşturabilirsiniz.
+
+Bu işlem:
+
+* tabloları
+* triggerları
+* stored procedureleri
+* ilişkileri
+
+oluşturacaktır.
+
+## 3️⃣ Uygulamayı Açın
+
+Visual Studio kullanarak aşağıdaki solution dosyasını açın:
+
+```
+SourceCode/WindowsFormsApp2.sln
+```
+
+## 4️⃣ Veritabanı Bağlantısını Güncelleyin
+
+Aşağıdaki dosyada bulunan **Connection String** ayarlarını kendi yerel veritabanı bilgilerinize göre güncelleyin:
+
+```
+App.config
+```
+
+## 5️⃣ Uygulamayı Çalıştırın
+
+Visual Studio üzerinden projeyi derleyip çalıştırın:
+
+```
+Build → Start Debugging
+```
+
+Uygulama çalıştığında **Spor Tesisleri Rezervasyon Sistemi** aktif hale gelecektir.
+
+---
+
+# 👥 Proje Ekibi
+
+| İsim          | Bölüm                 |
+| ------------- | --------------------- |
+| Tunahan Yanık | Endüstri Mühendisliği |
+| Ceren Akça    | Endüstri Mühendisliği |
+| Beliz Kaplan  | Endüstri Mühendisliği |
+
+---
+
+# 📌 Projenin Amacı
+
+Bu proje, **veritabanı mühendisliği**, **hibrit veri mimarisi** ve **masaüstü yazılım geliştirme** yaklaşımlarının bir araya getirilerek **üniversite spor tesislerinin yönetim süreçlerinin dijitalleştirilmesini** göstermektedir.
+
+Aynı zamanda proje, **Endüstri Mühendisliği prensiplerinin yazılım sistemleri ve operasyonel yönetim süreçlerinde nasıl uygulanabileceğini** göstermeyi amaçlamaktadır.
