@@ -1,60 +1,112 @@
-                                                                                  **Üniversite Spor Tesisleri Rezervasyon Sistemi**
+🚀 Üniversite Spor Tesisleri Rezervasyon Sistemi
 
+Üniversite bünyesindeki spor tesislerinin yönetimini, saha rezervasyonlarını ve personel takibini dijitalleştiren, ilişkisel (SQL) ve doküman tabanlı (NoSQL) veritabanı mantığını birleştiren hibrit bir yönetim sistemi.
 
-  -Bu proje, bir üniversite bünyesindeki spor tesislerinin (merkez, doğu vb.) yönetimini, saha rezervasyonlarını, üyelik paketlerini ve personel takibini dijitalleştirmek amacıyla geliştirilmiş hibrit bir veritabanı yönetim sistemidir.
-  -Proje, ilişkisel veritabanı (SQL) ile doküman tabanlı veritabanı (NoSQL) mantığını birleştirerek kapsamlı bir çözüm sunar.
-  -Öne Çıkan ÖzelliklerGelişmiş Veritabanı Mimarisi: Veriler, veri bütünlüğünü sağlamak adına 3. Normal Form (3NF) kurallarına göre normalize edilmiştir.
-  -Otomasyon ve Kontrol (Triggers): \* Saha durumu "Bakımda" veya "Kapalı" ise rezervasyon yapılmasını engelleyen otomatik kontrol mekanizması.Hatalı tarih girişlerini (bitiş tarihinin başlangıçtan önce olması gibi) önleyen validasyon tetikleyicileri.İş Mantığı Yönetimi (Stored Procedures): \* Personel maaş analizi ve zam planlama simülasyonları.Üye harcama limitlerine göre otomatik "VIP" kampanya tanımlama sistemi.Hibrit Veri Modeli: SQL Server üzerindeki ilişkisel veriler, yüksek performanslı okuma ve esnek dökümantasyon için MongoDB (JSON) formatına başarılı bir şekilde migrate edilmiştir.
+Bu proje, karmaşık tesis yönetim süreçlerini optimize etmek ve veri bütünlüğünü en üst seviyede tutmak amacıyla bir Endüstri Mühendisliği perspektifiyle geliştirilmiş kapsamlı bir PoC (Kavram Kanıtı) çalışmasıdır.
 
+🖼️ Kullanıcı Arayüzü (WinForms)
 
+Sistem, C# Windows Forms üzerinde geliştirilmiş, kullanıcı dostu ve fonksiyonel bir arayüze sahiptir. Yönetim paneli üzerinden üyelik işlemleri, tesis durum kontrolleri ve finansal raporlamalar anlık olarak takip edilebilir.
 
- -- **Teknik StackDil:** C# (.NET Framework 4.7.2)UI: Windows Forms (WinForms)Veritabanı (RDBMS): MS SQL ServerVeritabanı (NoSQL): MongoDBTasarım: ER Diyagramları, UML Sınıf Diyagramları) --
+📋 İçindekiler
 
+Ana Özellikler
 
+Veritabanı Nesneleri ve Mantığı
 
-**Proje Yapısı Plaintext**
+Teknoloji Mimarisi
 
+Proje Yapısı
+
+Kurulum ve Çalıştırma
+
+Proje Sahipleri
+
+🎯 Ana Özellikler
+
+Bu sistemin temel yetenekleri ve mühendislik çözümleri şunlardır:
+
+🏗️ Gelişmiş Veritabanı Mimarisi: - Veriler, veri bütünlüğünü ve performansını optimize etmek adına 3. Normal Form (3NF) kurallarına göre normalize edilmiştir.
+
+Gereksiz veri tekrarı önlenmiş ve ilişkisel bağlar sağlam temellere oturtulmuştur.
+
+🤖 Akıllı Otomasyon ve Kontroller (Triggers):
+
+Bakım Kontrolü: Saha durumu "Bakımda" veya "Kapalı" ise sistem otomatik olarak rezervasyon girişini engeller.
+
+Validasyon: Hatalı tarih girişlerini (bitişin başlangıçtan önce olması gibi) veritabanı seviyesinde önleyen tetikleyiciler.
+
+⚙️ İş Mantığı Yönetimi (Stored Procedures):
+
+Maaş Analizi: Personel maaş takibi ve zam planlama simülasyonları için özel prosedürler.
+
+VIP Kampanya Sistemi: Üye harcama limitlerini analiz ederek otomatik olarak "VIP" statüsü tanımlayan akıllı algoritmalar.
+
+🔄 Hibrit Veri Modeli: - MS SQL Server üzerindeki ilişkisel veriler, yüksek performanslı okuma ve esnek dökümantasyon ihtiyaçları için MongoDB (JSON) formatına migrate edilerek hibrit bir yapı kurulmuştur.
+
+🔬 Veritabanı Nesneleri (Teknik Detay)
+
+Proje içerisinde yer alan bazı kritik SQL nesneleri ve işlevleri:
+
+Scalar Functions: * fn_SeansBelirle: Giriş saatine göre otomatik tarife hesaplar.
+
+UyelikKalanGunSayisi: Üyelik paketlerinin kalan süresini gerçek zamanlı takip eder.
+
+Stored Procedures: * EkipmanKiralama: Stok kontrollü ekipman kiralama süreci.
+
+prc_UyeKayitEkleme: Hata kontrollü ve validasyonlu yeni üye kaydı.
+
+Views & Joins: Karmaşık üye hareketleri ve ödeme raporları için optimize edilmiş, yüksek performanslı sorgu görünümleri.
+
+🛠️ Teknoloji Mimarisi
+
+📂 Proje Yapısı
+
+Proje, yönetimi kolay ve modüler bir klasör hiyerarşisine sahiptir:
+
+Sports_Facility_Management/
 ├── Database/
-│   ├── Schema.sql          # Tablo oluşturma, Trigger ve SP scriptleri
-│   └── Normalization.docx   # 1NF, 2NF, 3NF raporları
+│   ├── Schema.sql           # Tablo oluşturma, Trigger ve SP scriptleri
+│   └── Normalization.docx   # 1NF, 2NF, 3NF raporları ve tasarım kararları
 ├── NoSQL/
-│   └── Collections/        # MongoDB JSON çıktıları (Üye, Tesis, Rezervasyon vb.)
+│   └── Collections/         # MongoDB JSON çıktıları (Üye, Tesis, Rezervasyon vb.)
 ├── Documentation/
-│   ├── ER\_Diagram.pdf      # Varlık-İlişki diyagramı
-│   └── UML\_Diagram.png     # Sistem sınıf diyagramı
+│   ├── ER_Diagram.pdf       # Varlık-İlişki (E-R) diyagramı
+│   └── UML_Diagram.png      # Sistem sınıf diyagramı
 └── SourceCode/
-&nbsp;   └── WindowsFormsApp2/   # C# Proje kaynak kodları
+    └── WindowsFormsApp2/    # C# WinForms proje kaynak kodları ve Solution (.sln)
 
 
+🚀 Kurulum ve Çalıştırma
 
--------Veritabanı Nesneleri (Teknik Detay)Proje içerisinde yer alan bazı kritik SQL nesneleri şunlardır-------
+Projeyi yerel ortamınızda ayağa kaldırmak için şu adımları izleyin:
 
-1-)Scalar Functions: fn\_SeansBelirle (saate göre tarife belirleme),
+Veritabanı Kurulumu: Database/ klasöründeki .sql dosyasını MS SQL Server Management Studio (SSMS) üzerinde çalıştırarak şemayı oluşturun.
 
-2-)UyelikKalanGunSayisi (paket takibi).
-3-)Stored Procedures: EkipmanKiralama (stok kontrollü kiralama),
-4-)prc\_UyeKayitEkleme (hata kontrollü kayıt).
-5-)Views \& Joins: Karmaşık üye ve ödeme raporları için optimize edilmiş sorgular.
+IDE Hazırlığı: Visual Studio ile SourceCode/ altındaki .sln dosyasını açın.
 
-------Kurulum--------
+Bağlantı Ayarları: App.config dosyasındaki Connection Strings (Bağlantı Dizeleri) bölümünü kendi yerel SQL Server ve MongoDB sunucu bilgilerinizle güncelleyin.
 
-1-)Database/ klasöründeki .sql dosyasını MS SQL Server üzerinde çalıştırarak veritabanı şemasını oluşturun.
-2-)Visual Studio ile SourceCode/ altındaki .sln dosyasını açın.
-3-)App.config dosyasındaki bağlantı dizelerini (Connection Strings) kendi yerel sunucunuza göre güncelleyin.
-4-)Projeyi derleyin ve çalıştırın.
+Derleme: Projeyi Build (Derle) yaptıktan sonra Start diyerek uygulamayı başlatabilirsiniz.
 
+👥 Proje Sahipleri
 
-### 👥 Proje Sahipleri
+Bu çalışma, bir ekip projesi olarak aşağıdaki üyeler tarafından geliştirilmiştir:
 
-| İsim Soyisim | Bölüm |
-| :--- | :--- |
-| **Tunahan Yanık** | Endüstri Mühendisliği |
-| **Ceren Akça** | Endüstri Mühendisliği |
-| **Beliz Kaplan** | Endüstri Mühendisliği |
+İsim Soyisim
 
+Bölüm
 
-## 📁 Klasör Yapısı
-- **SourceCode/**: C# Windows Forms uygulama kodları.
-- **Database/**: SQL Normalizasyon raporu ve veri tabanı şemaları.
-- **Documentation/**: E-R ve UML diyagramları.
-- **Json/**: NoSQL (MongoDB/JSON) yapısına uygun veri setleri.
+Tunahan Yanık
+
+Endüstri Mühendisliği
+
+Ceren Akça
+
+Endüstri Mühendisliği
+
+Beliz Kaplan
+
+Endüstri Mühendisliği
+
+Bu proje, üniversite tesis yönetimi süreçlerinin dijital dönüşümüne katkı sağlamak amacıyla geliştirilmiştir.
