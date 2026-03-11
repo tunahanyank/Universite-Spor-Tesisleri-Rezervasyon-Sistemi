@@ -1,0 +1,1 @@
+[{"UzmanlikAlaniID":4000,"UzmanlikAlani":"Tenis"},{"UzmanlikAlaniID":4001,"UzmanlikAlani":"Voleybol"},{"UzmanlikAlaniID":4002,"UzmanlikAlani":"Futbol"},{"UzmanlikAlaniID":4003,"UzmanlikAlani":"Yüzme"},{"UzmanlikAlaniID":4004,"UzmanlikAlani":"Basketbol"},{"UzmanlikAlaniID":4005,"UzmanlikAlani":"Fitness"}]

@@ -1,0 +1,1 @@
+[{"AdresID":10,"Il":"Kayseri","Ilce":"Kocasinan"},{"AdresID":11,"Il":"Kayseri","Ilce":"Talas"},{"AdresID":12,"Il":"Kayseri ","Ilce":"Develi"},{"AdresID":13,"Il":"Kayseri","Ilce":"Melikgazi"},{"AdresID":14,"Il":"Kayseri","Ilce":"İncesu"},{"AdresID":15,"Il":"Kayseri","Ilce":"Pınarbaşı"},{"AdresID":16,"Il":"Kayseri","Ilce":"Yahyalı"},{"AdresID":18,"Il":"Kayseri","Ilce":"Sarız"}]

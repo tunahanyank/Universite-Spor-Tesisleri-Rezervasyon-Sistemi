@@ -1,0 +1,1 @@
+[{"PersonelTurID":3000,"PersonelTuru":"Eğitmen"},{"PersonelTurID":3001,"PersonelTuru":"İdari "},{"PersonelTurID":3003,"PersonelTuru":"Hizmet Bakım "}]

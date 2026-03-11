@@ -1,0 +1,1 @@
+[{"OnayDurumId":10000,"OnayDurum":"Onaylandı"},{"OnayDurumId":10001,"OnayDurum":"İptal Edildi"}]

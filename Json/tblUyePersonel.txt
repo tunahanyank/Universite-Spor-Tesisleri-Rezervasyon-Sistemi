@@ -1,0 +1,1 @@
+[{"UyeID":1003,"Rol":"Akademik","Unvan":"Dr.Ögr.Üyesi","Birim":"İBF"},{"UyeID":1009,"Rol":"İdari","Unvan":"Memur","Birim":"Rektörlük"},{"UyeID":1012,"Rol":"Hizmet Bakım","Unvan":"Hizmetli","Birim":"Yapı İşleri"},{"UyeID":1013,"Rol":"Akademik","Unvan":"Rektör","Birim":"Rektörlük"}]

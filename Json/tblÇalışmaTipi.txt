@@ -1,0 +1,1 @@
+[{"TipID":2000,"CalismaTipi":"Tam zamanlı"},{"TipID":2001,"CalismaTipi":"Yarı zamanlı"}]

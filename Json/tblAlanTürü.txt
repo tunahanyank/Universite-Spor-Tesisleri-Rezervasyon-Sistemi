@@ -1,0 +1,1 @@
+[{"AlanTuruID":401,"AlanTuru":"Futbol"},{"AlanTuruID":402,"AlanTuru":"Basketbol"},{"AlanTuruID":403,"AlanTuru":"Voleybol"},{"AlanTuruID":404,"AlanTuru":"Tenis"},{"AlanTuruID":405,"AlanTuru":"Yüzme"},{"AlanTuruID":406,"AlanTuru":"Fitness"}]

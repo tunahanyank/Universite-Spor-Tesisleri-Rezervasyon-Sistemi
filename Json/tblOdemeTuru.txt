@@ -1,0 +1,1 @@
+[{"OdemeTuruID":201,"OdemeTuru":"Nakit"},{"OdemeTuruID":202,"OdemeTuru":"Kart"},{"OdemeTuruID":203,"OdemeTuru":"Iban"},{"OdemeTuruID":204,"OdemeTuru":"Eft"}]

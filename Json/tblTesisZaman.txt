@@ -1,0 +1,1 @@
+[{"TesisID":1,"AcilisZaman":"07:00:00","KapanisZaman":"22:00:00"},{"TesisID":2,"AcilisZaman":"07:00:00","KapanisZaman":"22:00:00"},{"TesisID":8,"AcilisZaman":"07:00:00","KapanisZaman":"22:00:00"}]

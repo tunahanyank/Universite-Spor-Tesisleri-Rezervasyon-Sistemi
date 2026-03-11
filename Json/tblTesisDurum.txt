@@ -1,0 +1,1 @@
+[{"DurumID":0,"TesisDurum":"Kapali"},{"DurumID":1,"TesisDurum":"Bakimda"},{"DurumID":2,"TesisDurum":"Aktif"}]

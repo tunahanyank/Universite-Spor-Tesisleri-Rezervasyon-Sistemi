@@ -1,0 +1,1 @@
+[{"UyelikTuruID":1,"UyelikTuruAd":"Öğrenci"},{"UyelikTuruID":2,"UyelikTuruAd":"İç Personel"},{"UyelikTuruID":3,"UyelikTuruAd":"Dış Üye"}]

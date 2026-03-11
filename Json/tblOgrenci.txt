@@ -1,0 +1,1 @@
+[{"UyeID":1001,"OgrenciNo":"202315004"},{"UyeID":1006,"OgrenciNo":"202409117"},{"UyeID":1010,"OgrenciNo":"202218329"}]

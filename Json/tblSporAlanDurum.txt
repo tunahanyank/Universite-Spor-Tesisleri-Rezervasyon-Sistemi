@@ -1,0 +1,1 @@
+[{"SporAlanDurumID":500,"DurumAd":"Bakımda"},{"SporAlanDurumID":501,"DurumAd":"Aktif"},{"SporAlanDurumID":502,"DurumAd":"Kapalı"}]
